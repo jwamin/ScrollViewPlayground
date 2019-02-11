@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         scrollView.backgroundColor = UIColor.white
         scrollView.isPagingEnabled = false
         
+        
         stacker = UIStackView(frame: scrollView.frame)
         stacker.translatesAutoresizingMaskIntoConstraints = false
         
