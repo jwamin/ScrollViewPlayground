@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Scrollr
+//  CodeScroller
 //
-//  Created by Joss Manger on 2/6/19.
+//  Created by Joss Manger on 2/11/19.
 //  Copyright © 2019 Joss Manger. All rights reserved.
 //
 
@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc.view.bounds = screenbounds
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
+        
         return true
     }
 

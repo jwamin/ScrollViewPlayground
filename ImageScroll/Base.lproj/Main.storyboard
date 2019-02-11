@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3kp-jv-d76"/>
+                        <viewControllerLayoutGuide type="bottom" id="5uQ-LD-lFA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="jKj-Rn-0sz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ss.png" translatesAutoresizingMaskIntoConstraints="NO" id="bPJ-Aa-Ip4">
+                                        <rect key="frame" x="0.0" y="0.0" width="3840" height="2400"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bPJ-Aa-Ip4" secondAttribute="bottom" id="32e-sC-WTy"/>
+                                    <constraint firstItem="bPJ-Aa-Ip4" firstAttribute="leading" secondItem="jKj-Rn-0sz" secondAttribute="leading" id="gDy-HU-3Sx"/>
+                                    <constraint firstItem="bPJ-Aa-Ip4" firstAttribute="top" secondItem="jKj-Rn-0sz" secondAttribute="top" id="ki9-JV-WKJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bPJ-Aa-Ip4" secondAttribute="trailing" id="wiW-SZ-5ED"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jKj-Rn-0sz" secondAttribute="bottom" id="5RN-Be-1Cr"/>
+                            <constraint firstItem="jKj-Rn-0sz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bo7-oY-7b4"/>
+                            <constraint firstAttribute="trailing" secondItem="jKj-Rn-0sz" secondAttribute="trailing" id="OJd-vt-N2b"/>
+                            <constraint firstItem="jKj-Rn-0sz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cj7-XF-lem"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgview" destination="bPJ-Aa-Ip4" id="rzN-wE-NvO"/>
+                        <outlet property="scrollView" destination="jKj-Rn-0sz" id="Xnc-Dd-3mj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.159420289855078" y="147.32142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ss.png" width="3840" height="2400"/>
+    </resources>
+</document>

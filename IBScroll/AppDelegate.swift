@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Scrollr
+//  IBScroll
 //
-//  Created by Joss Manger on 2/6/19.
+//  Created by Joss Manger on 2/7/19.
 //  Copyright © 2019 Joss Manger. All rights reserved.
 //
 
@@ -16,14 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let screen = UIScreen.main
-        let screenbounds = screen.bounds
-        window = UIWindow(frame: screenbounds)
-        let vc = ViewController()
-        vc.view.bounds = screenbounds
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
         return true
     }
 
