@@ -197,28 +197,4 @@ class ViewController: UIViewController {
     
 }
 
-extension UIColor{
-    static func randomNamedColor()->UIColor{
-        
-        let colors = [
-            UIColor.black,
-            UIColor.darkGray,
-            UIColor.lightGray,
-            UIColor.white,
-            UIColor.gray,
-            UIColor.red,
-            UIColor.green,
-            UIColor.blue,
-            UIColor.cyan,
-            UIColor.yellow,
-            UIColor.magenta,
-            UIColor.orange,
-            UIColor.purple,
-            UIColor.brown,
-            UIColor.clear
-        ]
-        
-        return colors[Int(arc4random_uniform(UInt32(colors.count)))]
-        
-    }
-}
+

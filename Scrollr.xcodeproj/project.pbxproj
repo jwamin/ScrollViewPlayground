@@ -28,6 +28,11 @@
 		3D99906B220B825300A35519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D99906A220B825300A35519 /* ViewController.swift */; };
 		3D999070220B825400A35519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99906F220B825400A35519 /* Assets.xcassets */; };
 		3D999073220B825400A35519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D999071220B825400A35519 /* LaunchScreen.storyboard */; };
+		3DB3D11722148E9400289833 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D11622148E9400289833 /* Extensions.swift */; };
+		3DB3D11822148E9400289833 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D11622148E9400289833 /* Extensions.swift */; };
+		3DB3D11922148E9400289833 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D11622148E9400289833 /* Extensions.swift */; };
+		3DB3D11A22148E9400289833 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D11622148E9400289833 /* Extensions.swift */; };
+		3DF7CD7222146976009696C4 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D5467CA2211F03800B3F4B6 /* test.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,7 @@
 		3D99906F220B825400A35519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D999072220B825400A35519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D999074220B825400A35519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DB3D11622148E9400289833 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +105,7 @@
 			children = (
 				3D5467BA2211E51F00B3F4B6 /* AppDelegate.swift */,
 				3D5467BC2211E51F00B3F4B6 /* ViewController.swift */,
-				3D5467CA2211F03800B3F4B6 /* test.storyboard */,
+				3DB3D11622148E9400289833 /* Extensions.swift */,
 				3D5467C12211E52000B3F4B6 /* Assets.xcassets */,
 				3D5467C32211E52000B3F4B6 /* LaunchScreen.storyboard */,
 				3D5467C62211E52000B3F4B6 /* Info.plist */,
@@ -128,6 +134,7 @@
 				3D63C499220CD1AE00E0BD12 /* AppDelegate.swift */,
 				3D63C49B220CD1AE00E0BD12 /* ViewController.swift */,
 				3D63C49D220CD1AE00E0BD12 /* Main.storyboard */,
+				3D5467CA2211F03800B3F4B6 /* test.storyboard */,
 				3D63C4A0220CD1B000E0BD12 /* Assets.xcassets */,
 				3D63C4A2220CD1B000E0BD12 /* LaunchScreen.storyboard */,
 				3D63C4A5220CD1B000E0BD12 /* Info.plist */,
@@ -314,6 +321,7 @@
 			files = (
 				3D63C4A4220CD1B000E0BD12 /* LaunchScreen.storyboard in Resources */,
 				3D63C4A1220CD1B000E0BD12 /* Assets.xcassets in Resources */,
+				3DF7CD7222146976009696C4 /* test.storyboard in Resources */,
 				3D63C49F220CD1AE00E0BD12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D5467BD2211E51F00B3F4B6 /* ViewController.swift in Sources */,
+				3DB3D11922148E9400289833 /* Extensions.swift in Sources */,
 				3D5467BB2211E51F00B3F4B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D5467D52211FD5100B3F4B6 /* ViewControllaz.swift in Sources */,
+				3DB3D11A22148E9400289833 /* Extensions.swift in Sources */,
 				3D5467D32211FD5100B3F4B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D63C49C220CD1AE00E0BD12 /* ViewController.swift in Sources */,
+				3DB3D11822148E9400289833 /* Extensions.swift in Sources */,
 				3D63C49A220CD1AE00E0BD12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D99906B220B825300A35519 /* ViewController.swift in Sources */,
+				3DB3D11722148E9400289833 /* Extensions.swift in Sources */,
 				3D999069220B825200A35519 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
