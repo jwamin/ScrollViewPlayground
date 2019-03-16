@@ -91,18 +91,21 @@ class ViewController: UIViewController {
     @objc
     func changed(_ sender:Any){
         print("trying change")
-        self.view.removeConstraints(self.constraints)
-        constraints.removeAll()
         scrollView.isPagingEnabled = pagingSwitch.isOn
         setupViews()
         setupConstraints()
-        print("done",self.constraints.count,self.view.constraints.count)
+//        self.view.removeConstraints(self.constraints)
+//        constraints.removeAll()
+//        scrollView.isPagingEnabled = pagingSwitch.isOn
+//        setupViews()
+//        setupConstraints()
+//        print("done",self.constraints.count,self.view.constraints.count)
     }
     
     func removeAllConstraints(view:UIView,recursive:Bool){
         
         //print("deactivating \(view.constraints.count) constraints at \(view)")
-        view.removeConstraints(view.constraints)
+        view.removeConstraints(constraints)
         
         if(recursive){
             //print("recursive")
@@ -124,9 +127,17 @@ class ViewController: UIViewController {
         print(view.constraints.count)
     }
     
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        setupConstraints()
+    }
+    
     func setupConstraints(){
         
-        if(self.constraints.count == 0){
+        if !self.constraints.isEmpty {
+            NSLayoutConstraint.deactivate(self.constraints)
+            self.constraints.removeAll()
+        }
             var views = ["scroll":scrollView!,"stack":stacker!,"switch":pagingSwitch] as [String:Any]
             for (index,arranged) in stacker.arrangedSubviews.enumerated(){
                 views["arranged"+String(index)] = arranged
@@ -192,7 +203,7 @@ class ViewController: UIViewController {
             
         }
         
-    }
+    
     
     
 }
