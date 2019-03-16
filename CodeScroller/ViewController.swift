@@ -14,26 +14,33 @@ class ViewController: UIViewController {
     var stacker:UIStackView!
     var pagingSwitch:UISwitch!
     var constraints:[NSLayoutConstraint] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Angrily set main view background color, to ensure full cover by scrollview
         self.view.backgroundColor = UIColor.red
         self.view.translatesAutoresizingMaskIntoConstraints = false
         
-        
+        //create scrollview and assign to iVar
         scrollView = UIScrollView(frame: self.view.frame)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.backgroundColor = UIColor.white
         scrollView.isPagingEnabled = false
         
+        
+        //create inner nested stackview
         stacker = UIStackView(frame: scrollView.frame)
         stacker.translatesAutoresizingMaskIntoConstraints = false
         
+        //configure stackview
         stacker.axis = .vertical
         stacker.alignment = .center
         stacker.distribution = .equalSpacing
         
+        //create 20 subviews
         for _ in 0...20{
+            
             let view = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 100, height: 100)))
             view.translatesAutoresizingMaskIntoConstraints = false
             
@@ -43,28 +50,38 @@ class ViewController: UIViewController {
             view.addSubview(funkySubview)
 
             stacker.addArrangedSubview(view)
+            
         }
         
-        setupViews()
+        //call setup views
+        //setupViews()
         
+        //add stackview to scrollview
         scrollView.addSubview(stacker)
         
+        //add scrollview to main view
         view.addSubview(scrollView)
         
+        //Create switch, set switch, add target for switch action
         pagingSwitch = UISwitch()
         pagingSwitch.isOn = scrollView.isPagingEnabled
         pagingSwitch.translatesAutoresizingMaskIntoConstraints = false
         pagingSwitch.addTarget(self, action: #selector(changed(_:)), for: .valueChanged)
+        
+        //rotate switch using the transform attribute, this makes it look really cool
         let rotation = CGFloat(-45 * (.pi/180.0));
         pagingSwitch.transform = CGAffineTransform(rotationAngle: rotation)
+        
+        //add to view hierarchy
         view.addSubview(pagingSwitch)
         
-        print(view.constraints, "before constraint fn",view.frame.size)
-        setupConstraints()
-        print("initial setup done",self.constraints.count,self.view.constraints.count)
+        //constrain views
+        //setupConstraints()
+        
     }
     
     private func setupViews(){
+        print("setup views called")
         for view in stacker.arrangedSubviews{
             let subview = view.subviews[0]
             var viewref:UIView
@@ -73,16 +90,20 @@ class ViewController: UIViewController {
                 subview.isHidden = false
                 stacker.spacing = 0
                 viewref = subview
+                scrollView.contentInsetAdjustmentBehavior = .never
+                view.layer.borderWidth = 0.0
             } else {
                 view.backgroundColor = UIColor.randomNamedColor()
                 subview.isHidden = true
                 stacker.spacing = 10
                 viewref = view
+                scrollView.contentInsetAdjustmentBehavior = .automatic
             }
-            
+            viewref.layer.borderColor = UIColor.black.cgColor
             if(viewref.backgroundColor == UIColor.white || viewref.backgroundColor == UIColor.clear){
-                viewref.layer.borderColor = UIColor.black.cgColor
                 viewref.layer.borderWidth = 1.0
+            } else {
+                viewref.layer.borderWidth = 0.0
             }
         }
 
@@ -94,28 +115,22 @@ class ViewController: UIViewController {
         scrollView.isPagingEnabled = pagingSwitch.isOn
         setupViews()
         setupConstraints()
-//        self.view.removeConstraints(self.constraints)
-//        constraints.removeAll()
-//        scrollView.isPagingEnabled = pagingSwitch.isOn
-//        setupViews()
-//        setupConstraints()
-//        print("done",self.constraints.count,self.view.constraints.count)
     }
     
-    func removeAllConstraints(view:UIView,recursive:Bool){
-        
-        //print("deactivating \(view.constraints.count) constraints at \(view)")
-        view.removeConstraints(constraints)
-        
-        if(recursive){
-            //print("recursive")
-            for subview in view.subviews{
-                removeAllConstraints(view: subview, recursive: true)
-            }
-        }
-        
-        
-    }
+//    func removeAllConstraints(view:UIView,recursive:Bool){
+//
+//        //print("deactivating \(view.constraints.count) constraints at \(view)")
+//        view.removeConstraints(constraints)
+//
+//        if(recursive){
+//            //print("recursive")
+//            for subview in view.subviews{
+//                removeAllConstraints(view: subview, recursive: true)
+//            }
+//        }
+//
+//
+//    }
     
     func adjustSpacing(){
         let height = self.view.frame.height
@@ -129,6 +144,7 @@ class ViewController: UIViewController {
     
     override func viewSafeAreaInsetsDidChange() {
         super.viewSafeAreaInsetsDidChange()
+        setupViews()
         setupConstraints()
     }
     
