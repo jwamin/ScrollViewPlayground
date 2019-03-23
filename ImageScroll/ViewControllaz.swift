@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var marker: UIView!
     @IBOutlet weak var imgview: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    var shouldAnimate:Bool = false
+    var animating:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -59,8 +63,39 @@ class ViewController: UIViewController {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         setMarkerColor()
+        animate()
     }
 
+    func animate(){
+        
+        if !shouldAnimate {
+            marker.layer.removeAnimation(forKey: "bounce anim")
+            animating = false
+            return
+        }
+        
+        if(animating){
+            return
+        }
+        
+        
+        
+        let animation = CASpringAnimation(keyPath: "position")
+        let newPosition = CGPoint(x: marker.layer.position.x, y: marker.layer.position.y+10)
+        animation.initialVelocity = 20
+        animation.mass = 1
+        animation.damping = 10
+        animation.stiffness = 10
+        animation.toValue = newPosition
+        animation.duration = 1
+        animation.repeatCount = .infinity
+        animation.autoreverses = true
+        
+        CATransaction.begin()
+        marker.layer.add(animation, forKey: "bounce anim")
+        animating = true
+        CATransaction.commit()
+    }
     
     private func setMarkerColor(){
         let currentPoint = marker.frame.origin
@@ -70,9 +105,11 @@ class ViewController: UIViewController {
         if(currentPoint == desiredPoint) {
             print("match")
             marker.backgroundColor = UIColor.green
+            shouldAnimate = true
         } else {
             print("nah")
             marker.backgroundColor = UIColor.red
+            shouldAnimate = false
         }
         
     }
