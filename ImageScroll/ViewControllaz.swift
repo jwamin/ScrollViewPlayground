@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var desiredX: NSLayoutConstraint!
+    @IBOutlet weak var desiredY: NSLayoutConstraint!
+    @IBOutlet weak var marker: UIView!
     @IBOutlet weak var imgview: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
@@ -20,8 +23,12 @@ class ViewController: UIViewController {
         
         scrollView.delegate = self
         
-        setZoomParameters(scrollView.bounds.size)
-        centerImage()
+        //setZoomParameters(scrollView.bounds.size)
+        //centerImage()
+        
+        
+        
+        
     }
 
     func setZoomParameters(_ scrollViewSize:CGSize){
@@ -46,10 +53,31 @@ class ViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        setZoomParameters(scrollView.bounds.size)
-        centerImage()
+        //setZoomParameters(scrollView.bounds.size)
+        //centerImage()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        setMarkerColor()
     }
 
+    
+    private func setMarkerColor(){
+        let currentPoint = marker.frame.origin
+        let desiredPoint = CGPoint(x: desiredX.constant, y: desiredY.constant)
+        print(currentPoint,desiredPoint)
+        
+        if(currentPoint == desiredPoint) {
+            print("match")
+            marker.backgroundColor = UIColor.green
+        } else {
+            print("nah")
+            marker.backgroundColor = UIColor.red
+        }
+        
+    }
+    
+    
 }
 
 extension ViewController : UIScrollViewDelegate{

@@ -27,9 +27,20 @@
                                     <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ss.png" translatesAutoresizingMaskIntoConstraints="NO" id="bPJ-Aa-Ip4">
                                         <rect key="frame" x="0.0" y="0.0" width="3840" height="2400"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-Gs-DO0" userLabel="widget">
+                                        <rect key="frame" x="284" y="732" width="130" height="130"/>
+                                        <color key="backgroundColor" red="0.90720337630000003" green="0.20214849709999999" blue="0.1371823251" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="H3u-jx-gSP"/>
+                                            <constraint firstAttribute="width" secondItem="zJI-Gs-DO0" secondAttribute="height" multiplier="1:1" id="s3I-V3-pt9"/>
+                                            <constraint firstAttribute="height" constant="130" id="wdB-Na-Izg"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="bPJ-Aa-Ip4" secondAttribute="bottom" id="32e-sC-WTy"/>
+                                    <constraint firstItem="zJI-Gs-DO0" firstAttribute="top" secondItem="jKj-Rn-0sz" secondAttribute="top" priority="250" constant="1452" id="YJr-c4-aGF"/>
+                                    <constraint firstItem="zJI-Gs-DO0" firstAttribute="leading" secondItem="jKj-Rn-0sz" secondAttribute="leading" priority="250" constant="1884" id="eS6-z3-LtL"/>
                                     <constraint firstItem="bPJ-Aa-Ip4" firstAttribute="leading" secondItem="jKj-Rn-0sz" secondAttribute="leading" id="gDy-HU-3Sx"/>
                                     <constraint firstItem="bPJ-Aa-Ip4" firstAttribute="top" secondItem="jKj-Rn-0sz" secondAttribute="top" id="ki9-JV-WKJ"/>
                                     <constraint firstAttribute="trailing" secondItem="bPJ-Aa-Ip4" secondAttribute="trailing" id="wiW-SZ-5ED"/>
@@ -40,12 +51,19 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="jKj-Rn-0sz" secondAttribute="bottom" id="5RN-Be-1Cr"/>
                             <constraint firstItem="jKj-Rn-0sz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bo7-oY-7b4"/>
+                            <constraint firstItem="zJI-Gs-DO0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CTl-mt-2aR"/>
                             <constraint firstAttribute="trailing" secondItem="jKj-Rn-0sz" secondAttribute="trailing" id="OJd-vt-N2b"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zJI-Gs-DO0" secondAttribute="trailing" id="U40-yb-nsX"/>
                             <constraint firstItem="jKj-Rn-0sz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cj7-XF-lem"/>
+                            <constraint firstItem="5uQ-LD-lFA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zJI-Gs-DO0" secondAttribute="bottom" id="iZo-z7-GNz"/>
+                            <constraint firstItem="zJI-Gs-DO0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3kp-jv-d76" secondAttribute="bottom" id="pHA-Av-KhS"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="desiredX" destination="eS6-z3-LtL" id="5Bi-Zg-mCi"/>
+                        <outlet property="desiredY" destination="YJr-c4-aGF" id="IBF-4g-MRO"/>
                         <outlet property="imgview" destination="bPJ-Aa-Ip4" id="rzN-wE-NvO"/>
+                        <outlet property="marker" destination="zJI-Gs-DO0" id="lRe-PT-wsR"/>
                         <outlet property="scrollView" destination="jKj-Rn-0sz" id="Xnc-Dd-3mj"/>
                     </connections>
                 </viewController>
