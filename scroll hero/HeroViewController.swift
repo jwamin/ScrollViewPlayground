@@ -59,6 +59,9 @@ class Hero2ViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         initialValueForLayoutConstraint = topConstraint.constant
+        
+        self.navigationItem.title = "Title"
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
