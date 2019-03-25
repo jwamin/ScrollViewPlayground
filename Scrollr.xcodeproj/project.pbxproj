@@ -33,6 +33,12 @@
 		3DB3D11922148E9400289833 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D11622148E9400289833 /* Extensions.swift */; };
 		3DB3D11A22148E9400289833 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D11622148E9400289833 /* Extensions.swift */; };
 		3DF7CD7222146976009696C4 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D5467CA2211F03800B3F4B6 /* test.storyboard */; };
+		57883B1022490B9F007B2904 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57883B0F22490B9F007B2904 /* AppDelegate.swift */; };
+		57883B1222490B9F007B2904 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57883B1122490B9F007B2904 /* HeroViewController.swift */; };
+		57883B1522490B9F007B2904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57883B1322490B9F007B2904 /* Main.storyboard */; };
+		57883B1722490BA1007B2904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57883B1622490BA0007B2904 /* Assets.xcassets */; };
+		57883B1A22490BA1007B2904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57883B1822490BA1007B2904 /* LaunchScreen.storyboard */; };
+		57883B1F22491344007B2904 /* terabyte.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5467E22211FD7D00B3F4B6 /* terabyte.png */; };
 		57ACA6C222453D6F0047E94B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACA6C122453D6F0047E94B /* AppDelegate.swift */; };
 		57ACA6C422453D6F0047E94B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACA6C322453D6F0047E94B /* ViewController.swift */; };
 		57ACA6C722453D6F0047E94B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57ACA6C522453D6F0047E94B /* Main.storyboard */; };
@@ -71,6 +77,13 @@
 		3D999072220B825400A35519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D999074220B825400A35519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DB3D11622148E9400289833 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		57883B0D22490B9F007B2904 /* scroll hero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scroll hero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57883B0F22490B9F007B2904 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57883B1122490B9F007B2904 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
+		57883B1422490B9F007B2904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57883B1622490BA0007B2904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57883B1922490BA1007B2904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57883B1B22490BA1007B2904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57ACA6BF22453D6F0047E94B /* Stacky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stacky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57ACA6C122453D6F0047E94B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57ACA6C322453D6F0047E94B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +116,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3D999062220B825200A35519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57883B0A22490B9F007B2904 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -169,6 +189,7 @@
 				3D5467B92211E51F00B3F4B6 /* CodeScroller */,
 				3D5467D12211FD5100B3F4B6 /* ImageScroll */,
 				57ACA6C022453D6F0047E94B /* Stacky */,
+				57883B0E22490B9F007B2904 /* scroll hero */,
 				3D999066220B825200A35519 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -181,6 +202,7 @@
 				3D5467B82211E51F00B3F4B6 /* CodeScroller.app */,
 				3D5467D02211FD5100B3F4B6 /* ImageScroll.app */,
 				57ACA6BF22453D6F0047E94B /* Stacky.app */,
+				57883B0D22490B9F007B2904 /* scroll hero.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,6 +217,19 @@
 				3D999074220B825400A35519 /* Info.plist */,
 			);
 			path = Scrollr;
+			sourceTree = "<group>";
+		};
+		57883B0E22490B9F007B2904 /* scroll hero */ = {
+			isa = PBXGroup;
+			children = (
+				57883B0F22490B9F007B2904 /* AppDelegate.swift */,
+				57883B1122490B9F007B2904 /* HeroViewController.swift */,
+				57883B1322490B9F007B2904 /* Main.storyboard */,
+				57883B1622490BA0007B2904 /* Assets.xcassets */,
+				57883B1822490BA1007B2904 /* LaunchScreen.storyboard */,
+				57883B1B22490BA1007B2904 /* Info.plist */,
+			);
+			path = "scroll hero";
 			sourceTree = "<group>";
 		};
 		57ACA6C022453D6F0047E94B /* Stacky */ = {
@@ -281,6 +316,23 @@
 			productReference = 3D999065220B825200A35519 /* Scrollr.app */;
 			productType = "com.apple.product-type.application";
 		};
+		57883B0C22490B9F007B2904 /* scroll hero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57883B1E22490BA1007B2904 /* Build configuration list for PBXNativeTarget "scroll hero" */;
+			buildPhases = (
+				57883B0922490B9F007B2904 /* Sources */,
+				57883B0A22490B9F007B2904 /* Frameworks */,
+				57883B0B22490B9F007B2904 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "scroll hero";
+			productName = "scroll hero";
+			productReference = 57883B0D22490B9F007B2904 /* scroll hero.app */;
+			productType = "com.apple.product-type.application";
+		};
 		57ACA6BE22453D6F0047E94B /* Stacky */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57ACA6D022453D710047E94B /* Build configuration list for PBXNativeTarget "Stacky" */;
@@ -320,6 +372,9 @@
 					3D999064220B825200A35519 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					57883B0C22490B9F007B2904 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					57ACA6BE22453D6F0047E94B = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -343,6 +398,7 @@
 				3D5467B72211E51F00B3F4B6 /* CodeScroller */,
 				3D5467CF2211FD5100B3F4B6 /* ImageScroll */,
 				57ACA6BE22453D6F0047E94B /* Stacky */,
+				57883B0C22490B9F007B2904 /* scroll hero */,
 			);
 		};
 /* End PBXProject section */
@@ -387,6 +443,17 @@
 			files = (
 				3D999073220B825400A35519 /* LaunchScreen.storyboard in Resources */,
 				3D999070220B825400A35519 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57883B0B22490B9F007B2904 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57883B1A22490BA1007B2904 /* LaunchScreen.storyboard in Resources */,
+				57883B1722490BA1007B2904 /* Assets.xcassets in Resources */,
+				57883B1522490B9F007B2904 /* Main.storyboard in Resources */,
+				57883B1F22491344007B2904 /* terabyte.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +507,15 @@
 				3D99906B220B825300A35519 /* ViewController.swift in Sources */,
 				3DB3D11722148E9400289833 /* Extensions.swift in Sources */,
 				3D999069220B825200A35519 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57883B0922490B9F007B2904 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57883B1222490B9F007B2904 /* HeroViewController.swift in Sources */,
+				57883B1022490B9F007B2904 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +575,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				3D999072220B825400A35519 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		57883B1322490B9F007B2904 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57883B1422490B9F007B2904 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57883B1822490BA1007B2904 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57883B1922490BA1007B2904 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -782,6 +874,42 @@
 			};
 			name = Release;
 		};
+		57883B1C22490BA1007B2904 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
+				INFOPLIST_FILE = "scroll hero/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.scroll-hero";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57883B1D22490BA1007B2904 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
+				INFOPLIST_FILE = "scroll hero/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.scroll-hero";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		57ACA6CE22453D710047E94B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -862,6 +990,15 @@
 			buildConfigurations = (
 				3D999078220B825400A35519 /* Debug */,
 				3D999079220B825400A35519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57883B1E22490BA1007B2904 /* Build configuration list for PBXNativeTarget "scroll hero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57883B1C22490BA1007B2904 /* Debug */,
+				57883B1D22490BA1007B2904 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
