@@ -39,6 +39,7 @@
 		57883B1722490BA1007B2904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57883B1622490BA0007B2904 /* Assets.xcassets */; };
 		57883B1A22490BA1007B2904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57883B1822490BA1007B2904 /* LaunchScreen.storyboard */; };
 		57883B1F22491344007B2904 /* terabyte.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5467E22211FD7D00B3F4B6 /* terabyte.png */; };
+		57883B21224921A4007B2904 /* Hero3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57883B20224921A4007B2904 /* Hero3ViewController.swift */; };
 		57ACA6C222453D6F0047E94B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACA6C122453D6F0047E94B /* AppDelegate.swift */; };
 		57ACA6C422453D6F0047E94B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACA6C322453D6F0047E94B /* ViewController.swift */; };
 		57ACA6C722453D6F0047E94B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57ACA6C522453D6F0047E94B /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		57883B1622490BA0007B2904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57883B1922490BA1007B2904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57883B1B22490BA1007B2904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57883B20224921A4007B2904 /* Hero3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero3ViewController.swift; sourceTree = "<group>"; };
 		57ACA6BF22453D6F0047E94B /* Stacky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stacky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57ACA6C122453D6F0047E94B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57ACA6C322453D6F0047E94B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			children = (
 				57883B0F22490B9F007B2904 /* AppDelegate.swift */,
 				57883B1122490B9F007B2904 /* HeroViewController.swift */,
+				57883B20224921A4007B2904 /* Hero3ViewController.swift */,
 				57883B1322490B9F007B2904 /* Main.storyboard */,
 				57883B1622490BA0007B2904 /* Assets.xcassets */,
 				57883B1822490BA1007B2904 /* LaunchScreen.storyboard */,
@@ -516,6 +519,7 @@
 			files = (
 				57883B1222490B9F007B2904 /* HeroViewController.swift in Sources */,
 				57883B1022490B9F007B2904 /* AppDelegate.swift in Sources */,
+				57883B21224921A4007B2904 /* Hero3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
